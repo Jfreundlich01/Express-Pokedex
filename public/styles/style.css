@@ -64,3 +64,17 @@
     left:375px;
 }
 
+.pokemon-type{
+    position: absolute;
+    top: 560px;
+    left: 810px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 10px;
+}
+
+.type2{
+ margin: 0 5px;
+}
+
+
