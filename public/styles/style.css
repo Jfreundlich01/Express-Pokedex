@@ -15,6 +15,7 @@
     height: 750px;
 }
 
+/* index */
 .pokemon-list{
     position: absolute;
     /* height: 10vh;
@@ -33,11 +34,33 @@
     margin: 2px 9px;
 }
 
+
 .pokemon-img-sm{
     margin: 0 auto;
 }
 
 .pokemon-img-sm img{
     width: 2vw;
+}
+
+/* show */
+
+.pokemon-one{
+    position: absolute;
+    top: 260px;
+    left: 375px;
+    height: 190px;
+    width: 400px;
+}
+
+.pokemon-img-lg img{
+    width: 200px;
+    height: 180px;
+}
+
+.pokemon-name{
+    position: absolute;
+    top: 610px;
+    left:375px;
 }
 
