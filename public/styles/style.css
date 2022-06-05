@@ -100,7 +100,7 @@
     top: 250px;
     color: white;
     height: 150px;
-    width: 270gpx;
+    width: 270px;
     overflow: scroll;
 }
 
@@ -109,5 +109,28 @@
     font-weight: bold;
 }
 
+.update{
+    position: absolute;
+    top: 645px;
+    left: 820px;
+    text-align: center;
+}
+
+.update a{
+    text-decoration: none;
+    color: white;
+}
+
+.delete{
+    position: absolute;
+    top: 645px;
+    left: 990px;
+    text-align: center;
+}
+
+.delete a{
+    text-decoration: none;
+    color: white;
+}
 
 
