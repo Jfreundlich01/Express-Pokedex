@@ -14,7 +14,8 @@
                 {%for pokemon in allPokemon%}
                 <div class="pokemon">
                     <div class="pokemon-img-sm">
-                        <img src="{{pokemon.img}}" alt="">
+
+                        <a href="pokedex/{{forloop.index0}}"><img src="{{pokemon.img}}" alt=""></a>
                     </div>
                 </div>
                 {%endfor%}

@@ -23,6 +23,14 @@ app.get('/pokedex', (req,res) =>{
     )
 })
 
+app.get('/pokedex/:indexOfPokemon', (req,res) =>{
+    res.render('show', 
+    {
+        pokemon: pokemonArr[req.params.indexOfPokemon]
+    }
+    )
+})
+
 
 
 
