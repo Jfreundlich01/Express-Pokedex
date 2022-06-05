@@ -77,4 +77,21 @@
  margin: 0 5px;
 }
 
+.pokemon-stats{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    position: absolute;
+    top: 430px;
+    left:810px;
+    font-size: 20px;
+    margin: 0 10px
+}
+
+.stat-cat{
+    margin: 0 2px;
+}
+.stat-val{
+    margin: 20px 0;
+}
+
 
