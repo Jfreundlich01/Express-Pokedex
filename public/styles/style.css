@@ -94,4 +94,20 @@
     margin: 20px 0;
 }
 
+.pokemon-moves{
+    position: absolute;
+    left: 810px;
+    top: 250px;
+    color: white;
+    height: 150px;
+    width: 270gpx;
+    overflow: scroll;
+}
+
+.move-name{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
 
