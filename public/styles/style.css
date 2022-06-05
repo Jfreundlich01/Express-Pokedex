@@ -1,0 +1,43 @@
+
+.container{
+    /* background-image: url(/public/images/pokadex.png);
+    background-size: contain;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.pokadex{
+    position: absolute;
+    width: 900px;
+    height: 750px;
+}
+
+.pokemon-list{
+    position: absolute;
+    /* height: 10vh;
+    width: 10vw; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+    top: 260px;
+    left: 350px;
+    height: 190px;
+    overflow: scroll;
+}
+
+.pokemon{
+    display: grid;
+    margin: 2px 9px;
+}
+
+.pokemon-img-sm{
+    margin: 0 auto;
+}
+
+.pokemon-img-sm img{
+    width: 2vw;
+}
+
