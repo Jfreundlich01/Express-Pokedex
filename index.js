@@ -36,12 +36,13 @@ app.post('/pokedex', (req,res) => {
 
 app.get('/pokedex/:indexOfPokemon', (req,res) =>{
 
-    index = [req.params.indexOfPokemon]
     console.log(index)
     res.render('show', 
     {
         pokemon: pokemonArr[req.params.indexOfPokemon],
-        currentIndex: index[0]
+        currentIndex : req.params.indexOfPokemon
+        // currentIndex: index[0]
+
     }
     )
 })
