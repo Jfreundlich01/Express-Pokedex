@@ -103,6 +103,17 @@ body {
   justify-content: space-between;
 }
 
+.left-container_name{
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #33915A;
+    border: 2px black solid;
+    box-shadow: inset 0 0 3px 3px rgba(0,0,0,.3);
+    margin-top: 10px;
+}
+
 .poke-name {
   color: white;
   font-size: 25px;
@@ -161,7 +172,7 @@ body {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  margin: 100px 25px 0;
+  margin: 55px 25px 0;
 }
 
 .controllers__d-pad {
@@ -317,7 +328,7 @@ body {
 }
 
 .list-item:hover {
-  background: #85cbf2;
+  background: #1280f2;
   color: black;
 }
 
