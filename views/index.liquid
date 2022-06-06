@@ -26,7 +26,8 @@
                     <div class="left-container__screen">
                         {% for pokemon in allPokemon%}
                         <div class="list-item">
-                            <img src="{{pokemon.img}}" alt="">
+
+                            <a href="/pokedex/{{forloop.index0}}"><img src="{{pokemon.img}}" alt=""></a>
                         </div>
                         {%endfor%}
                       </div>
