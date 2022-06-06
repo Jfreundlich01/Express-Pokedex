@@ -22,6 +22,17 @@ app.get('/pokedex', (req,res) =>{
     
     )
 })
+app.get('/pokedex/new', (req,res) => {
+    res.render('new',{
+
+    })
+})
+
+app.post('/pokedex', (req,res) => {
+    pokemonArr.push(req.body)
+    console.log(pokemonArr.slice((pokemonArr.length - 2), pokemonArr.length))
+    res.redirect('/pokedex')
+})
 
 app.get('/pokedex/:indexOfPokemon', (req,res) =>{
     res.render('show', 
@@ -30,6 +41,8 @@ app.get('/pokedex/:indexOfPokemon', (req,res) =>{
     }
     )
 })
+
+
 
 
 

@@ -12,32 +12,42 @@
             <img class = "pokadex" src="/public/images/pokadex.png" alt="">
             <div class="new-pokemon-form">
                 <form action="">
-                    <input type="text" id = "pokemon-name" name="pokemon-name" value="Pokemon Name">
+                    <label for="pokemon-name">Pokemon Name</label>
+                    <input type="text" id = "pokemon-name" name="pokemon-name">
 
-                    <input type="text" id = "pokemon-image" name="pokemon-image" value="pokemon url">
+                    <label for="pokemon-image">Pokemon Image</label>
+                    <input type="text" id = "pokemon-image" name="pokemon-image">
 
-                    <input type="text" id = "pokemon-type" name="pokemon-type" value="type1,type2">
+                    <label for="pokemon-type">Pokemon Type</label>
+                    <input type="text" id = "pokemon-type" name="pokemon-type">
 
                     <div class="stats-cont">
                         <div>
+                            <label for="pokemon-HP">HP</label>
                             <input type="text" id = "pokemon-HP" name="pokemon-HP">
                         </div>
                         <div>
+                            <label for="pokemon-attack">Attack</label>
                             <input type="text" id = "pokemon-attack" name="pokemon-attack">
                         </div>
                         <div>
+                            <label for="pokemon-defense">defense</label>
                             <input type="text" id = "pokemon-defense" name="pokemon-defense">
                         </div>
                         <div>
+                            <label for="pokemon-spattack">Special Attack</label>
                             <input type="text" id = "pokemon-spattack" name="pokemon-spattack">
                         </div>
                         <div>
+                            <label for="pokemon-spdefense">Special Defense</label>
                             <input type="text" id = "pokemon-spdefense" name="pokemon-spdefense">
                         </div>
                         <div>
+                            <label for="pokemon-speed">Speed</label>
                             <input type="text" id = "pokemon-speed" name="pokemon-speed">
                         </div>
                     </div>
+                    <input type="submit" name="submit" value="Submit">
 
 
                 </form>

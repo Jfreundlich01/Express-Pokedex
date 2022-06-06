@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/styles/style.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container">
+            <img class = "pokadex" src="/images/pokadex.png" alt="">
+            <div class="new-pokemon-form">
+                <form action="/pokedex" method = "POST">
+                    <label for="pokemon-name">Pokemon Name</label>
+                    <input type="text" id = "pokemon-name" name="name">
+
+                    <label for="pokemon-image">Pokemon Image</label>
+                    <input type="text" id = "pokemon-image" name="img">
+
+                    <label for="pokemon-type">Pokemon Type</label>
+                    <input type="list" id = "pokemon-type" name="type">
+
+                    {% comment %} <div class="stats-cont">
+                        <div>
+                            <label for="pokemon-HP">HP</label>
+                            <input type="text" id = "pokemon-HP" name="hp">
+                        </div>
+                        <div>
+                            <label for="pokemon-attack">Attack</label>
+                            <input type="text" id = "pokemon-attack" name="attack">
+                        </div>
+                        <div>
+                            <label for="pokemon-defense">defense</label>
+                            <input type="text" id = "pokemon-defense" name="defense">
+                        </div>
+                        <div>
+                            <label for="pokemon-spattack">Special Attack</label>
+                            <input type="text" id = "pokemon-spattack" name="spattack">
+                        </div>
+                        <div>
+                            <label for="pokemon-spdefense">Special Defense</label>
+                            <input type="text" id = "pokemon-spdefense" name="spdefense">
+                        </div>
+                        <div>
+                            <label for="pokemon-speed">Speed</label>
+                            <input type="text" id = "pokemon-speed" name="speed">
+                        </div>
+                    </div> {% endcomment %}
+                    <input type="submit" name="submit" value="Submit">
+
+
+                </form>
+            </div>
+            <div class="back">
+                <a href="/pokedex">Back</a>
+                </div>
+        </div>
+    </body>
+    </html>
