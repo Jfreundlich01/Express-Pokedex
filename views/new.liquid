@@ -1,4 +1,169 @@
-<!DOCTYPE html>
+<!doctype html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="/styles/new-css.css">
+      <title>Pokedex</title>
+    </head>
+    <body>
+      <div class="pokedex">
+        <div class="left-container">
+          <div class="left-container__top-section">
+            <div class="top-section__blue"></div>
+            <div class="top-section__small-buttons">
+              <div class="top-section__red"></div>
+              <div class="top-section__yellow"></div>
+              <div class="top-section__green"></div>
+            </div>
+          </div>
+          <div class="left-container__main-section-container">
+            <div class="left-container__main-section">
+              <div class="main-section__white">
+                <div class="main-section__black">
+                    <div class="left-container_screen-update">
+                        <form action="/pokedex" method = "POST">
+                            <label for="pokemon-name">Pokemon Name</label>
+                            <input type="text" id = "pokemon-name" name="name">
+        
+                            <label for="pokemon-image">Pokemon Image</label>
+                            <input type="text" id = "pokemon-image" name="img">
+        
+                            <label for="pokemon-type">Pokemon Type</label>
+                            <input type="list" id = "pokemon-type" name="type">
+
+                            <input type="submit" value="Submit">
+                      </form>
+                    </div>
+                </div>
+              </div>
+              <div class="left-container_name">
+                  <div class="name">
+                      <h1>{{pokemon.name}}</h1>
+                  </div>
+              </div>
+              <div class="left-container__controllers">
+                <div class="controllers__buttons">
+                    <div class="buttons__button"><a href="/pokedex/">B</a></div>
+                    <div class="buttons__button">A</div>
+                </div>
+                <div class="controllers__d-pad">
+                  <div class="d-pad__cell top"></div>
+                  <div class="d-pad__cell left"></div>
+                  <div class="d-pad__cell middle"></div>
+                  <div class="d-pad__cell right"></div>
+                  <div class="d-pad__cell bottom"></div>
+                </div>
+              </div>
+            </div>
+            <div class="left-container__right">
+              <div class="left-container__hinge"></div>
+              <div class="left-container__hinge"></div>
+            </div>
+          </div>
+        </div>
+        <div class="right-container">
+          <div class="right-container__black">
+            <div class="right-container__screen">
+              <ul>
+                {% for move in pokemon.moves.level%}
+              <li>
+                  <div class="move">
+                    <p>
+                        {% if move.learnedat == ""%}
+                        <span class= "move-name">{{move.name}}</span>
+                        learned at level: 
+                        <span class="lvl">0</span>
+                        {%else%}
+                        <span class= "move-name">{{move.name}}</span>
+                        learned at level: 
+                        <span class="lvl">{{move.learnedat}}</span>
+                        {%endif%}
+                    </p>
+                  </div>
+              </li>
+              {%endfor%} 
+          </ul>
+  
+            </div>
+          </div>
+          <div class="right-container__blue">
+            <div class="right-container__stats">
+                <div class="stat-cat">
+                    <div class="stat-name">
+                        <h4>Hp</h4>
+                    </div>
+                    <div class="stat-val">
+                        <h4>{{pokemon.stats.hp}}</h4>
+                    </div>
+                </div>
+                <div class="stat-cat">
+                    <div class="stat-name">
+                        <h4>Atk</h4>
+                    </div>
+                    <div class="stat-val">
+                        <h4>{{pokemon.stats.attack}}</h4>
+                    </div>
+                </div>
+                <div class="stat-cat">
+                    <div class="stat-name">
+                        <h4>Def</h4>
+                    </div>
+                    <div class="stat-val">
+                        <h4>{{pokemon.stats.defense}}</h4>
+                    </div>
+                </div>
+                <div class="stat-cat">
+                    <div class="stat-name">
+                        <h4>SpAtk</h4>
+                    </div>
+                    <div class="stat-val">
+                        <h4>{{pokemon.stats.spattack}}</h4>
+                    </div>
+                </div>
+                <div class="stat-cat">
+                    <div class="stat-name">
+                        <h4>SpDef</h4>
+                    </div>
+                    <div class="stat-val">
+                        <h4>{{pokemon.stats.spdefense}}</h4>
+                    </div>
+                </div>
+                <div class="stat-cat">
+                    <div class="stat-name">
+                        <h4>Spd</h4>
+                    </div>
+                    <div class="stat-val">
+                        <h4>{{pokemon.stats.speed}}</h4>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="right-container__buttons">
+            <div class="left-button">
+              <a href="/pokedex/{{currentIndex}}/edit">Update</a>
+            </div>
+            <div class="center-button">
+              <form action="/pokedex/{{currentIndex}}?_method=DELETE" method = "POST">
+                <input class= "submit" type="submit" value ="Del">
+              </form>
+            </div>
+            <div class="right-button"><a href="/pokedex/new">New</a></div>
+          </div>
+        </div>
+      </div>
+      <script src="app.js"></script>
+    </body>
+    </html>
+  
+
+
+
+
+
+{% comment %} <!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -47,7 +212,7 @@
                             <input type="text" id = "pokemon-speed" name="speed">
                         </div>
                     </div> {% endcomment %}
-                    <input type="submit" name="submit" value="Submit">
+                    {% comment %} <input type="submit" name="submit" value="Submit">
 
                 </form>
             </div>
@@ -56,4 +221,4 @@
                 </div>
         </div>
     </body>
-    </html>
+    </html> {% endcomment %} 
