@@ -134,7 +134,11 @@
         </div>
         <div class="right-container__buttons">
           <div class="left-button">Upd</div>
-          <div class="right-button">Del</div>
+          <div class="right-button">
+            <form action="/pokedex/{{currentIndex}}?_method=DELETE" method = "POST">
+              <input class= "submit" type="submit" value ="Del">
+            </form>
+          </div>
         </div>
       </div>
     </div>
