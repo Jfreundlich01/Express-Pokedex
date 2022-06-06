@@ -368,10 +368,31 @@ body {
   font-weight: bolder;
 }
 
+.right-container_types{
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
 .right-container__buttons {
   display: flex;
   justify-content: space-around;
   margin-top: 25px;
+}
+.type{
+  border: 1px black solid;
+  width: 100px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  border: 2px solid black;
+  box-shadow: 0 0 2px 2px rgba(0,0,0,.3);
+  border-style: inset;
 }
 
 .left-button,
