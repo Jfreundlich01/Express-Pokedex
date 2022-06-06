@@ -80,7 +80,7 @@ body {
   background: #DEDEDE;
   border: 3px solid black;
   box-shadow: inset 0 0 3px 3px rgba(0,0,0,.3);
-  height: 225px;
+  height: 270px;
 }
 
 .main-section__black {
@@ -111,36 +111,10 @@ body {
     background-color: #33915A;
     border: 2px black solid;
     box-shadow: inset 0 0 3px 3px rgba(0,0,0,.3);
+    height: 40px;
     margin-top: 10px;
 }
 
-.poke-name {
-  color: white;
-  font-size: 25px;
-  font-weight: bold;
-}
-
-.poke-id {
-  color: rgba(0,0,0,.5);
-  font-size: 20px;
-}
-
-.screen__image {
-  display: flex;
-  justify-content: space-around;
-}
-
-.poke-front-image,
-.poke-back-image {
-  height: 96px;
-  width: 96px;
-}
-
-.screen__description {
-  display: flex;
-  height: 100px;
-  justify-content: space-around;
-}
 
 .screen__stats {
   background: rgba(0,0,0,.3);
@@ -172,7 +146,7 @@ body {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  margin: 55px 25px 0;
+  margin: 15px;
 }
 
 .controllers__d-pad {
@@ -318,6 +292,7 @@ body {
     background-color: #43B0F2;
     box-shadow: 0 0 2px 2px rgba(0,0,0,.3);
     text-align: center;
+    height: 40px;
     border: 2px black solid;
 
 }
@@ -327,9 +302,8 @@ body {
   border-radius: 15px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  height: 150px;
+  height: 200px;
   overflow: scroll;
-  padding: 15px 15px 0;
 }
 
 .list-item {
@@ -341,6 +315,7 @@ body {
 
 .list-item img{
     width: 2vw;
+    height: 4vh;
 }
 
 .list-item:hover {
