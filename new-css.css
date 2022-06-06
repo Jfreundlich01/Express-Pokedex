@@ -248,6 +248,11 @@ body {
   width: 35px;
 }
 
+.buttons__button a {
+    text-decoration: none;
+    color: rgba(255,255,255,.75);
+}
+
 .buttons__button:first-child {
   margin-top: 5px;
 }
@@ -302,8 +307,19 @@ body {
 .right-container__black {
   background: black;
   box-shadow: 0 0 2px 2px rgba(0,0,0,.3);
-  height: 100px;
+  height: 200px;
   padding: 10px;
+}
+
+.right-container__stats{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin-top: 20px;
+    background-color: #43B0F2;
+    box-shadow: 0 0 2px 2px rgba(0,0,0,.3);
+    text-align: center;
+    border: 2px black solid;
+
 }
 
 .left-container__screen {
