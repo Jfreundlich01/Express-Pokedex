@@ -169,3 +169,20 @@
 input{
     margin: 5px 0;
 }
+
+.pokemon-img-lg-edit img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 520px;
+
+}
+
+.new-pokemon-form-edit{
+    position: absolute;
+    top: 260px;
+    left: 350px;
+    height: 190px;
+    width: 270px;
+    z-index: 1;
+}

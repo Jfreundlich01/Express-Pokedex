@@ -1,6 +1,6 @@
 const express = require('express');
 const app = require('liquid-express-views')(express())
-const methodOverRide = require('method-override')
+const methodOverride = require('method-override')
 port = 3000;
 const pokemonArr = require('./pokedex/models/pokemon.js')
 
@@ -11,7 +11,7 @@ app.use((req, res, next) => {
 });
 app.use(express.static('public'))
 app.use(express.urlencoded({extended:false}));
-app.use(methodOverRide('_method'))
+app.use(methodOverride('_method'))
 let index= []
 
 app.get('/pokedex', (req,res) =>{
@@ -36,7 +36,7 @@ app.post('/pokedex', (req,res) => {
 
 app.get('/pokedex/:indexOfPokemon', (req,res) =>{
 
-    console.log(index)
+    console.log(req.body)
     res.render('show', 
     {
         pokemon: pokemonArr[req.params.indexOfPokemon],
@@ -52,6 +52,25 @@ app.delete('/pokedex/:indexOfPokemon', (req,res) =>{
     pokemonArr.splice(req.params.indexOfPokemon, 1)
     res.redirect("/pokedex")
 })
+
+let currentIndex = ""
+app.get('/pokedex/:indexOfPokemon/edit', (req,res) =>{
+    currentIndex = req.params.indexOfPokemon
+    res.render(
+        "edit", {
+            pokemon: pokemonArr[req.params.indexOfPokemon],
+            index: req.params.indexOfPokemon
+        }
+    )
+})
+
+app.put('/pokedex/:indexOfPokemon', (req,res) =>{
+    pokemonArr[req.params.indexOfPokemon].name = req.body.name
+
+    res.redirect(`/pokedex/${currentIndex}`)
+
+})
+
 
 
 

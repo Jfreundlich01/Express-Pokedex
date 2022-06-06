@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/styles/style.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container">
+            <img class = "pokadex" src="/images/pokadex.png" alt="">
+            <div class="new-pokemon-form-edit">
+                <form action="/pokedex/{{index}}?_method=PUT" method="POST">
+                    <label for="pokemon-name">Pokemon Name</label>
+                    <input type="text" id = "pokemon-name" name="name">
+
+                    <label for="pokemon-image">Pokemon Image</label>
+                    <input type="text" id = "pokemon-image" name="img">
+
+                    <label for="pokemon-type">Pokemon Type</label>
+                    <input type="list" id = "pokemon-type" name="type">
+                    <input type="submit" name="submit" value="Submit Changes">
+                </form>
+            </div>
+            <div class="pokemon-one">
+                <div class="pokemon">
+                  <div class="pokemon-img-lg-edit">
+                    <img src="{{pokemon.img}}" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="pokemon-name">
+                <h1>{{pokemon.name}}</h1>
+              </div>
+              <div class="pokemon-type">
+                <div class="type1">
+                  <h2>{{pokemon.type[0]}}</h2>
+                </div>
+                <div class="type2">
+                  <h2>{{pokemon.type[1]}}</h2>
+                </div>
+              </div>
+              <div class="pokemon-stats">
+                <div class="stat-cont">
+                  <div class="stat-cat">Hp</div>
+                  <div class="stat-val">{{pokemon.stats.hp}}</div>
+                </div>
+                <div class="stat-cont">
+                  <div class="stat-cat">Atk</div>
+                  <div class="stat-val">{{pokemon.stats.attack}}</div>
+                </div>
+                <div class="stat-cont">
+                  <div class="stat-cat">Def</div>
+                  <div class="stat-val">{{pokemon.stats.defense}}</div>
+                </div>
+                <div class="stat-cont">
+                  <div class="stat-cat">SPAK</div>
+                  <div class="stat-val">{{pokemon.stats.spattack}}</div>
+                </div>
+                <div class="stat-cont">
+                  <div class="stat-cat">SPDF</div>
+                  <div class="stat-val">{{pokemon.stats.spdefense}}</div>
+                </div>
+              </div>
+            <div class="new">
+                <a href="pokedex/new">Create a New Pokemon</a>
+            </div>
+        </div>
+    </body>
+    </html>
