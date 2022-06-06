@@ -306,6 +306,14 @@ body {
   overflow: scroll;
 }
 
+.left-container_screen-large{
+  background: #43B0F2;
+  border-radius: 15px;
+  height: 200px;
+  display: flex;
+  margin: 0 auto;
+}
+
 .list-item {
   color: white;
   cursor: pointer;
@@ -318,6 +326,19 @@ body {
     height: 4vh;
 }
 
+.list-item-large{
+  color: white;
+  cursor: pointer;
+  padding-left: .5vw;
+  margin: 0 auto;
+}
+
+.list-item-large img{
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
 .list-item:hover {
   background: #1280f2;
   color: black;
@@ -326,6 +347,21 @@ body {
 .list-item:active {
   background: #1280f2;
   color: white;
+}
+
+.right-container__screen{
+  color: white;
+  height: 190px;
+  overflow: scroll;
+  font-size: medium;
+}
+
+.right-container__screen li{
+  margin: 15px 5px;
+}
+
+.move-name{
+  font-weight: bolder;
 }
 
 .right-container__buttons {

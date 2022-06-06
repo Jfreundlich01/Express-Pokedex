@@ -23,23 +23,21 @@
           <div class="left-container__main-section">
             <div class="main-section__white">
               <div class="main-section__black">
-                  <div class="left-container__screen">
-                      {% for pokemon in allPokemon%}
-                      <div class="list-item">
+                  <div class="left-container_screen-large">
+                      <div class="list-item-large">
                           <img src="{{pokemon.img}}" alt="">
                       </div>
-                      {%endfor%}
                     </div>
               </div>
             </div>
             <div class="left-container_name">
                 <div class="name">
-                    <h1></h1>
+                    <h1>{{pokemon.name}}</h1>
                 </div>
             </div>
             <div class="left-container__controllers">
               <div class="controllers__buttons">
-                  <div class="buttons__button"><a href="#">B</a></div>
+                  <div class="buttons__button"><a href="/pokedex/">B</a></div>
                   <div class="buttons__button">A</div>
               </div>
               <div class="controllers__d-pad">
@@ -60,56 +58,76 @@
       <div class="right-container">
         <div class="right-container__black">
           <div class="right-container__screen">
+            <ul>
+              {% for move in pokemon.moves.level%}
+            <li>
+                <div class="move">
+                  <p>
+                      {% if move.learnedat == ""%}
+                      <span class= "move-name">{{move.name}}</span>
+                      learned at level: 
+                      <span class="lvl">0</span>
+                      {%else%}
+                      <span class= "move-name">{{move.name}}</span>
+                      learned at level: 
+                      <span class="lvl">{{move.learnedat}}</span>
+                      {%endif%}
+                  </p>
+                </div>
+            </li>
+            {%endfor%} 
+        </ul>
+
           </div>
         </div>
         <div class="right-container__blue">
           <div class="right-container__stats">
               <div class="stat-cat">
                   <div class="stat-name">
-                      <h4></h4>
+                      <h4>Hp</h4>
                   </div>
                   <div class="stat-val">
-                      <h4></h4>
+                      <h4>{{pokemon.stats.hp}}</h4>
                   </div>
               </div>
               <div class="stat-cat">
                   <div class="stat-name">
-                      <h4></h4>
+                      <h4>Atk</h4>
                   </div>
                   <div class="stat-val">
-                      <h4></h4>
+                      <h4>{{pokemon.stats.attack}}</h4>
                   </div>
               </div>
               <div class="stat-cat">
                   <div class="stat-name">
-                      <h4></h4>
+                      <h4>Def</h4>
                   </div>
                   <div class="stat-val">
-                      <h4></h4>
+                      <h4>{{pokemon.stats.defense}}</h4>
                   </div>
               </div>
               <div class="stat-cat">
                   <div class="stat-name">
-                      <h4></h4>
+                      <h4>SpAtk</h4>
                   </div>
                   <div class="stat-val">
-                      <h4></h4>
+                      <h4>{{pokemon.stats.spattack}}</h4>
                   </div>
               </div>
               <div class="stat-cat">
                   <div class="stat-name">
-                      <h4></h4>
+                      <h4>SpDef</h4>
                   </div>
                   <div class="stat-val">
-                      <h4></h4>
+                      <h4>{{pokemon.stats.spdefense}}</h4>
                   </div>
               </div>
               <div class="stat-cat">
                   <div class="stat-name">
-                      <h4></h4>
+                      <h4>Spd</h4>
                   </div>
                   <div class="stat-val">
-                      <h4></h4>
+                      <h4>{{pokemon.stats.speed}}</h4>
                   </div>
               </div>
           </div>
