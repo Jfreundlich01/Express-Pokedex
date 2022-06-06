@@ -78,7 +78,9 @@
               <a href="#">Update</a>
           </div>
           <div class="delete">
-              <a href="#">Delete</a>
+            <form action="/pokedex/{{currentIndex}}?_method=DELETE" method = "POST">
+              <input type="submit" value ="Delete">
+            </form>
           </div>
         </div>
       </body>

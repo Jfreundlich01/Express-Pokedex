@@ -12,7 +12,7 @@ app.use((req, res, next) => {
 app.use(express.static('public'))
 app.use(express.urlencoded({extended:false}));
 app.use(methodOverRide('_method'))
-
+let index= []
 
 app.get('/pokedex', (req,res) =>{
     res.render('index', 
@@ -35,11 +35,21 @@ app.post('/pokedex', (req,res) => {
 })
 
 app.get('/pokedex/:indexOfPokemon', (req,res) =>{
+
+    index = [req.params.indexOfPokemon]
+    console.log(index)
     res.render('show', 
     {
-        pokemon: pokemonArr[req.params.indexOfPokemon]
+        pokemon: pokemonArr[req.params.indexOfPokemon],
+        currentIndex: index[0]
     }
     )
+})
+
+app.delete('/pokedex/:indexOfPokemon', (req,res) =>{
+    console.log("i deleted")
+    pokemonArr.splice(req.params.indexOfPokemon, 1)
+    res.redirect("/pokedex")
 })
 
 
