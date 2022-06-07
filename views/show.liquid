@@ -133,8 +133,85 @@
           </div>
         </div>
         <div class="right-container_types">
-          <div class="type water">Water</div>
-          <div class="type fire">Fire</div>
+        {% if pokemon.type[0] == "Normal" %}
+          <div class="type normal">{{pokemon.type[0]}}</div>
+          {% elsif pokemon.type[0] == "Fighting" %}
+          <div class="type fighting">{{pokemon.type[0]}}</div>
+          {% elsif pokemon.type[0] == "Flying" %}
+          <div class="type flying">{{pokemon.type[0]}}</div>
+          {% elsif pokemon.type[0] == "Poison" %}
+          <div class="type poison">{{pokemon.type[0]}}</div>
+          {% elsif pokemon.type[0] == "Ground" %}
+          <div class="type ground">{{pokemon.type[0]}}</div>
+          {% elsif pokemon.type[0] == "Rock" %}
+          <div class="type rock">{{pokemon.type[0]}}</div>
+          {% elsif pokemon.type[0] == "Bug" %}
+          <div class="type bug">{{pokemon.type[0]}}</div>
+          {% elsif pokemon.type[0] == "Ghost" %}
+          <div class="type ghost">{{pokemon.type[0]}}</div>
+          {% elsif pokemon.type[0] == "Steel" %}
+          <div class="type steel">{{pokemon.type[0]}}</div>
+          {% elsif pokemon.type[0] == "Fire" %}
+          <div class="type fire">{{pokemon.type[0]}}</div>
+          {% elsif pokemon.type[0] == "Water" %}
+          <div class="type water">{{pokemon.type[0]}}</div>
+          {% elsif pokemon.type[0] == "Grass" %}
+          <div class="type grass">{{pokemon.type[0]}}</div>
+          {% elsif pokemon.type[0] == "Electric" %}
+          <div class="type electric">{{pokemon.type[0]}}</div>
+          {% elsif pokemon.type[0] == "Psychic" %}
+          <div class="type psychic">{{pokemon.type[0]}}</div>
+          {% elsif pokemon.type[0] == "Ice" %}
+          <div class="type ice">{{pokemon.type[0]}}</div>
+          {% elsif pokemon.type[0] == "Dragon" %}
+          <div class="type dragon">{{pokemon.type[0]}}</div>
+          {% elsif pokemon.type[0] == "Dark" %}
+          <div class="type dark">{{pokemon.type[0]}}</div>
+          {% elsif pokemon.type[0] == "Fairy" %}
+          <div class="type fairy">{{pokemon.type[0]}}</div>
+          {%else%}
+          <div class="type hide">{{pokemon.type[0]}}</div>
+        {% endif %}
+        {% comment %} type2 {% endcomment %}
+        {% if pokemon.type[1] == "Normal" %}
+          <div class="type normal">{{pokemon.type[1]}}</div>
+          {% elsif pokemon.type[1] == "Fighting" %}
+          <div class="type fighting">{{pokemon.type[1]}}</div>
+          {% elsif pokemon.type[1] == "Flying" %}
+          <div class="type flying">{{pokemon.type[1]}}</div>
+          {% elsif pokemon.type[1] == "Poison" %}
+          <div class="type poison">{{pokemon.type[1]}}</div>
+          {% elsif pokemon.type[1] == "Ground" %}
+          <div class="type ground">{{pokemon.type[1]}}</div>
+          {% elsif pokemon.type[1] == "Rock" %}
+          <div class="type rock">{{pokemon.type[1]}}</div>
+          {% elsif pokemon.type[1] == "Bug" %}
+          <div class="type bug">{{pokemon.type[1]}}</div>
+          {% elsif pokemon.type[1] == "Ghost" %}
+          <div class="type ghost">{{pokemon.type[1]}}</div>
+          {% elsif pokemon.type[1] == "Steel" %}
+          <div class="type steel">{{pokemon.type[1]}}</div>
+          {% elsif pokemon.type[1] == "Fire" %}
+          <div class="type fire">{{pokemon.type[1]}}</div>
+          {% elsif pokemon.type[1] == "Water" %}
+          <div class="type water">{{pokemon.type[1]}}</div>
+          {% elsif pokemon.type[1] == "Grass" %}
+          <div class="type grass">{{pokemon.type[1]}}</div>
+          {% elsif pokemon.type[1] == "Electric" %}
+          <div class="type electric">{{pokemon.type[1]}}</div>
+          {% elsif pokemon.type[1] == "Psychic" %}
+          <div class="type psychic">{{pokemon.type[1]}}</div>
+          {% elsif pokemon.type[1] == "Ice" %}
+          <div class="type ice">{{pokemon.type[1]}}</div>
+          {% elsif pokemon.type[1] == "Dragon" %}
+          <div class="type dragon">{{pokemon.type[1]}}</div>
+          {% elsif pokemon.type[1] == "Dark" %}
+          <div class="type dark">{{pokemon.type[1]}}</div>
+          {% elsif pokemon.type[1] == "Fairy" %}
+          <div class="type fairy">{{pokemon.type[1]}}</div>
+          {%else%}
+          <div class="type hide">{{pokemon.type[1]}}</div>
+        {% endif %}
         </div>
         <div class="right-container__buttons">
           <div class="left-button">
@@ -153,92 +230,3 @@
   </body>
   </html>
 
-
-{% comment %} <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" href="/styles/style.css">
-            <title>Document</title>
-        </head>
-      <body>
-        <div class="container">
-            <img class = "pokadex" src="/images/pokadex.png" alt="">
-          <div class="pokemon-one">
-            <div class="pokemon">
-              <div class="pokemon-img-lg">
-                <img src="{{pokemon.img}}" alt="" />
-              </div>
-            </div>
-          </div>
-          <div class="pokemon-name">
-            <h1>{{pokemon.name}}</h1>
-          </div>
-          <div class="pokemon-type">
-            <div class="type1">
-              <h2>{{pokemon.type[0]}}</h2>
-            </div>
-            <div class="type2">
-              <h2>{{pokemon.type[1]}}</h2>
-            </div>
-          </div>
-          <div class="pokemon-stats">
-            <div class="stat-cont">
-              <div class="stat-cat">Hp</div>
-              <div class="stat-val">{{pokemon.stats.hp}}</div>
-            </div>
-            <div class="stat-cont">
-              <div class="stat-cat">Atk</div>
-              <div class="stat-val">{{pokemon.stats.attack}}</div>
-            </div>
-            <div class="stat-cont">
-              <div class="stat-cat">Def</div>
-              <div class="stat-val">{{pokemon.stats.defense}}</div>
-            </div>
-            <div class="stat-cont">
-              <div class="stat-cat">SPAK</div>
-              <div class="stat-val">{{pokemon.stats.spattack}}</div>
-            </div>
-            <div class="stat-cont">
-              <div class="stat-cat">SPDF</div>
-              <div class="stat-val">{{pokemon.stats.spdefense}}</div>
-            </div>
-          </div>
-          <div class="pokemon-moves">
-              <ul>
-                    {% for move in pokemon.moves.level%}
-                  <li>
-                      <div class="move">
-                        <p>
-                            {% if move.learnedat == ""%}
-                            <span class= "move-name">{{move.name}}</span>
-                            learned at level: 
-                            <span class="lvl">0</span>
-                            {%else%}
-                            <span class= "move-name">{{move.name}}</span>
-                            learned at level: 
-                            <span class="lvl">{{move.learnedat}}</span>
-                            {%endif%}
-                        </p>
-                      </div>
-                  </li>
-                  {%endfor%} 
-              </ul>
-          </div>
-          <div class="back">
-            <a href="/pokedex">Back</a>
-            </div>
-          <div class="update">
-              <a href="/pokedex/{{currentIndex}}/edit">Update</a>
-          </div>
-          <div class="delete">
-            <form action="/pokedex/{{currentIndex}}?_method=DELETE" method = "POST">
-              <input type="submit" value ="Delete">
-            </form>
-          </div>
-        </div>
-      </body>
-    </html> {% endcomment %}
-    

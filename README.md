@@ -1,3 +1,4 @@
+
 <h1><img src="https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png" alt="" style="max-width:100%;" /></h1>
 
 # Pokedex
@@ -200,3 +201,10 @@ The order of your commits this time does not matter, but refer back to the MVP t
 - Submit your homework via the homework submission form pinned to the classroom channel
 
 ---
+
+
+
+##
+I used these two github gists as templates for my html and css, which I then built out to fit my needs: 
+-https://gist.github.com/angle943/f8b80c2dae63c2fd600f5b2f870874be
+-https://gist.github.com/angle943/b48dd5392b5f445af0343cf41ef1bb42
