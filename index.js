@@ -29,7 +29,13 @@ app.get('/pokedex/new', (req,res) => {
 })
 
 app.post('/pokedex', (req,res) => {
-    pokemonArr.push(req.body)
+    let newPokemon = {
+        name: req.body.name,
+        img: req.body.img,
+        type: [req.body.type1,req.body.type2]
+    }
+    pokemonArr.push(newPokemon)
+    console.log(req.body.type)
     console.log(pokemonArr.slice((pokemonArr.length - 2), pokemonArr.length))
     res.redirect('/pokedex')
 })
@@ -66,7 +72,6 @@ app.get('/pokedex/:indexOfPokemon/edit', (req,res) =>{
 
 app.put('/pokedex/:indexOfPokemon', (req,res) =>{
     pokemonArr[req.params.indexOfPokemon].name = req.body.name
-
     res.redirect(`/pokedex/${currentIndex}`)
 
 })
